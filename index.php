@@ -31,13 +31,9 @@ if(!is_numeric($halaman)){
     $halaman = $halamanPertama;
 }
 
-
-
-
 if(isset($_POST['aksi'])){
 
-    $halaman =
-    $_POST['halaman'];
+    $halaman = $_POST['halaman'];
 
     if(!is_numeric($halaman)){
         $halaman = $halamanPertama;
@@ -95,6 +91,23 @@ if(isset($_POST['aksi'])){
                 $rowHalaman["halaman_ke"];
             }
         }
+    if(isset($_POST['jawaban'])){
+
+        foreach($_POST['jawaban'] as $idsoal => $idjawaban){
+
+            $_SESSION['jawaban'][$idsoal] = $idjawaban;
+
+            $benarkah =
+            $objJawaban->cekJawaban($idjawaban);
+
+            $_SESSION['status'][$idsoal] = $benarkah;
+        }
+    }
+
+    if($_POST['aksi'] == "Previous"){
+
+        $tujuan =
+        $objSoal->getHalamanSebelumnya($halaman);
 
         if(!is_null($tujuan)){
 
@@ -203,7 +216,6 @@ while(
     href="css/style.css">
 
 </head>
-
 
 <body>
 
