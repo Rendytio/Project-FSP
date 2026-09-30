@@ -1,0 +1,37 @@
+body {
+    margin: 40px;
+}
+.soal-item {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.jawaban-info {
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.text-green {
+    color: green;
+    font-weight: bold;
+}
+.text-red {
+    color: red;
+    font-weight: bold;
+}
+.skor-container {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.btn-play-again {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+.btn-play-again:hover {
+    background-color: #45a049;
+}
